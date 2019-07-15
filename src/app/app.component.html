@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="formdata" (ngSubmit) = "onClickSubmit(formdata.value)" >
+       <input type="text" class="fortextbox" name="username" placeholder="username"
+          formControlName="username">
+       <br/>
+
+       <input type="pwd" class="fortextbox" name="pwd"
+          placeholder="pwd" formControlName="pwd">
+       <br/>
+
+       <input type="submit" [disabled] = "!formdata.valid" class="forsubmit" value="Log In">
+    </form>
+ </div>
+ <p>
+    Bạn vừa nhập username : {{username}}
+ </p>
